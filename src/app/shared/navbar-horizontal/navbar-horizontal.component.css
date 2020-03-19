@@ -1,0 +1,52 @@
+.menu-horizontal {
+    margin-left: 0px;
+}
+
+.fotos {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+.nombre {
+    margin-right: 130px;
+    display: block !important;
+}
+
+
+/* --- Clase que agregaremos cuando el usuario haga scroll --- */
+
+.menu-fixed {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    max-width: 100%;
+    width: 100%;
+    box-shadow: 0px 4px 3px rgba(0, 0, 0, .5);
+}
+
+@media screen and (max-width:640px) {
+    /* reglas CSS */
+    .clases-boton {
+        width: 170px;
+        margin-left: -70px;
+    }
+    .fotos {
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width:1024px) and (min-width:640px) {
+    /* reglas CSS */
+    .table {
+        margin-top: 30%;
+        margin-right: 10%;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    /* reglas CSS */
+}

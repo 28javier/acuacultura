@@ -1,0 +1,83 @@
+<!-- navbar horizontal -->
+<nav class=" menu-horizontal menu-fixed navbar navbar-dark bg-dark">
+    <a class="navbar-brand">
+    </a>
+    <form class="form-inline">
+        <img class="fotos img-responsive" src="../../../assets/img/foto.jpg" alt="">
+
+        <div class="nombre">
+            <label class="btn-block" style="color: ivory;">Eder Zambrano </label>
+            <label class="btn-block" style="color:mediumaquamarine;">Administrador </label>
+        </div>
+        <button class=" clases-boton btn btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#exampleModal" type="button" data-toggle="modal" data-target="#exampleModal">
+       
+         <img src="../../../assets/img/mas.png" width="30" height="30" alt="">
+         Crear Usuario </button>
+    </form>
+</nav>
+<!-- script para el menu estatico -->
+<script>
+    $(document).ready(function() {
+        var altura = $('.eders').offset().top;
+
+        $(window).on('scroll', function() {
+            if ($(window).scrollTop() > altura) {
+                $('.eders').addClass('menu-fixed');
+            } else {
+                $('.eders').removeClass('menu-fixed');
+            }
+        });
+
+    });
+</script>
+
+<!-- modal -->
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Registrar Usuario</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Email</label>
+                            <input type="email" class="form-control" id="inputEmail4">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Password</label>
+                            <input type="password" class="form-control" id="inputPassword4">
+                        </div>
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group col-md-4">
+                            <label for="inputState">Rol</label>
+                            <select id="inputState" class="form-control">
+                      <option selected>Administrador</option>
+                      <option>Usuario</option>
+                    </select>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Registrar</button>
+                    <button type="submit" class="btn btn-primary" style="margin-left: 10px;">Cancelar</button>
+
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,122 @@
+<!-- componentes principales del dashboard -->
+
+<div class="modelas">
+    <!-- llamada del componente modal para el boron resgistrar especie -->
+    <!-- <app-modal-especie></app-modal-especie> -->
+</div>
+<div class="area ">
+</div>
+<nav class="main-menu menu-fixed">
+    <ul>
+        <div class="divs">
+            <img class="foto" src="../../../assets/img/Logo MPECIP_ completo version 3-08.png" alt="">
+
+        </div>
+        <li>
+            <a>
+                <i class="fa fa-home fa-2x"></i>
+                <span class="nav-text">
+                            Dashboard
+                        </span>
+            </a>
+
+        </li>
+        <li class="has-subnav">
+            <a href="#">
+
+                <i class="fa fa-fish fa-2x">
+                            <img src="../../../assets/img/pescado (2).svg" style="background-image: orangered ;" width="30px" height="30px">
+                        </i>
+                <span class="nav-text">
+                            Vedas
+                        </span>
+            </a>
+
+        </li>
+        <li class="has-subnav">
+            <a href="#">
+                <i class="fa fa-list fa-2x"></i>
+                <span class="nav-text">
+                            Forms
+                        </span>
+            </a>
+
+        </li>
+        <li class="has-subnav">
+            <a href="#">
+                <i class="fa fa-folder-open fa-2x"></i>
+                <span class="nav-text">
+                            Pages
+                        </span>
+            </a>
+
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-bar-chart-o fa-2x"></i>
+                <span class="nav-text">
+                            Graphs and Statistics
+                        </span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-font fa-2x"></i>
+                <span class="nav-text">
+                           Quotes
+                        </span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-table fa-2x"></i>
+                <span class="nav-text">
+                            Tables
+                        </span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-map-marker fa-2x"></i>
+                <span class="nav-text">
+                            Maps
+                        </span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-info fa-2x"></i>
+                <span class="nav-text">
+                            Documentation
+                        </span>
+            </a>
+        </li>
+    </ul>
+
+    <ul class="logout">
+        <li>
+            <a href="#">
+                <i class="fa fa-power-off fa-2x"></i>
+                <span class="nav-text">
+                            Logout
+                        </span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<!-- script para que el menu se quede estatico -->
+<script>
+    $(document).ready(function() {
+        var altura = $('.main-menu').offset().top;
+
+        $(window).on('scroll', function() {
+            if ($(window).scrollTop() > altura) {
+                $('.main-menu').addClass('menu-fixed');
+            } else {
+                $('.main-menu').removeClass('menu-fixed');
+            }
+        });
+
+    });
+</script>
