@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Title } from '@angular/platform-browser';
+
+declare function init_plugins();
 
 @Component({
   selector: 'app-login',
@@ -8,14 +11,18 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor( public route: Router) { }
+  constructor( public router: Router,
+               private title: Title) {
+      this.title.setTitle('AcuaculturaLogin');
+                   }
 
   ngOnInit(): void {
+    init_plugins();
   }
 
 
   ingresar() {
-    // this.route.navigate(['/dashboard']);
+    this.router.navigate(['/dashboard']);
   }
 
 }
